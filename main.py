@@ -1,5 +1,7 @@
+import sys
+
 def main():
-    print("Hello from python-boilerplate!")
+    print(f"Python version: {sys.version}")
 
 
 if __name__ == "__main__":
