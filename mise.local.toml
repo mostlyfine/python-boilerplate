@@ -1,12 +1,12 @@
-[env]
-_.file = '.env'
-
 [tools]
 python = "3.13.2"
 uv = "0.9.21"
 
+[env]
+_.file = '.env' # https://mise.jdx.dev/environments/#env-file
+
 [settings]
-python.uv_venv_auto = true
+python.uv_venv_auto = true # https://mise.jdx.dev/lang/python.html#python.uv_venv_auto
 
 [tasks.check]
 alias = "c"
