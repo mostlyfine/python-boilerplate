@@ -1,0 +1,22 @@
+[tasks.check]
+alias = "c"
+description = "Run static code analysis and type checking"
+run = [
+  'uv run ruff check --fix',
+  'uv run ruff format',
+  'uv run ty check'
+]
+
+[tasks.marimo]
+alias = "m"
+description = "Run marimo"
+run = [
+  'uv run marimo edit'
+]
+
+[tasks.sync]
+alias = "s"
+description = "Install dependencies"
+run = [
+  'uv sync'
+]
