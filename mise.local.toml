@@ -1,3 +1,10 @@
+[tools]
+python = "3.13.2"
+uv = "0.9.21"
+
+[settings]
+python.uv_venv_auto = true
+
 [tasks.check]
 alias = "c"
 description = "Run static code analysis and type checking"
