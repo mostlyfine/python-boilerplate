@@ -1,17 +1,117 @@
-see: https://zenn.dev/ohashi_reon/articles/230e7ee6989233
+# Python Boilerplate with mise & uv
 
-# Role
+A modern Python development environment boilerplate featuring fast and maintainable project setup with `mise` and `uv`.
 
-## mise
-- environments
-- task runner
-- python
-- uv
+> Reference: https://zenn.dev/ohashi_reon/articles/230e7ee6989233
 
-## uv
-- virtual environment
-- package manager
+## Features
 
-no use
-- source .venv/bin/activate -> uv run
-- pip install -r requirements.txt -> uv add or uv sync
+- **mise**: Environment variable management, task runner, Python/uv version management
+- **uv**: Fast virtual environment creation and package management
+- **Ruff**: High-performance linter and formatter
+- **ty**: Python type checker
+- **marimo**: Interactive notebook environment
+
+## Prerequisites
+
+- [mise](https://mise.jdx.dev/) installation required
+
+```bash
+# macOS/Linux
+curl https://mise.run | sh
+
+# or via Homebrew
+brew install mise
+```
+
+## Setup
+
+```bash
+# Install required tools with mise (Python 3.13, uv, etc.)
+mise install
+
+# Install Python package dependencies
+mise run sync
+# or shorthand: mise run s
+```
+
+## Usage
+
+### Running Tasks
+
+Execute various commands using mise's task runner:
+
+```bash
+# Code check (Ruff + ty)
+mise run check
+# or shorthand: mise run c
+
+# Launch marimo notebook
+mise run marimo
+# or shorthand: mise run m
+
+# Sync dependencies
+mise run sync
+# or shorthand: mise run s
+```
+
+### Running Python Scripts
+
+```bash
+# Run Python via uv (no manual virtual environment activation required)
+uv run python main.py
+
+# or directly from mise
+mise exec -- python main.py
+```
+
+### Package Management
+
+Use `uv` instead of traditional pip commands:
+
+```bash
+# Add a package
+uv add <package-name>
+
+# Add a development package
+uv add --group dev <package-name>
+
+# Sync dependencies
+uv sync
+
+# Remove a package
+uv remove <package-name>
+```
+
+## Project Structure
+
+```
+.
+├── mise.local.toml      # mise configuration (tool versions, task definitions)
+├── pyproject.toml       # Project metadata and dependencies
+├── uv.lock              # Dependency lock file
+├── .python-version      # Python version specification
+├── main.py              # Sample entry point
+└── .venv/               # Virtual environment (auto-generated)
+```
+
+## Key Changes
+
+Differences from traditional Python development:
+
+| Traditional Method | This Project |
+|-------------------|--------------|
+| `source .venv/bin/activate` | Use `uv run` |
+| `pip install -r requirements.txt` | `uv add` or `uv sync` |
+| Version management with `pyenv` | Unified management with `mise` |
+| Multiple tool configuration files | Consolidated in `mise.local.toml` |
+
+## Development Tools
+
+- **Ruff**: Linting and code formatting
+- **ty**: Type checking (mypy compatible)
+- **marimo**: Reactive Python notebook environment
+
+## License
+
+MIT
