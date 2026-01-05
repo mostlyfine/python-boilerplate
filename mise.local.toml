@@ -7,6 +7,7 @@ _.file = '.env' # https://mise.jdx.dev/environments/#env-file
 
 [settings]
 python.uv_venv_auto = true # https://mise.jdx.dev/lang/python.html#python.uv_venv_auto
+experimental = true
 
 [tasks.check]
 alias = "c"
