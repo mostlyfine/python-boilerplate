@@ -27,10 +27,10 @@ brew install mise
 ## Setup
 
 ```bash
-# Install required tools with mise (Python 3.13, uv, etc.)
+# Install required tools with mise (uv, etc.)
 mise install
 
-# Install Python package dependencies
+# Install Python3 and Python package dependencies
 mise run sync
 # or shorthand: mise run s
 ```
@@ -59,10 +59,7 @@ mise run sync
 
 ```bash
 # Run Python via uv (no manual virtual environment activation required)
-uv run python main.py
-
-# or directly from mise
-mise exec -- python main.py
+uv run main.py
 ```
 
 ### Package Management
