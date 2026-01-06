@@ -1,9 +1,6 @@
-[tools]
-python = "3.13.2"
-uv = "0.9.21"
-
 [env]
 _.file = '.env' # https://mise.jdx.dev/environments/#env-file
+UV_PYTHON = { value = "",  tools = true } # https://github.com/jdx/mise/discussions/4698
 
 [settings]
 python.uv_venv_auto = true # https://mise.jdx.dev/lang/python.html#python.uv_venv_auto
