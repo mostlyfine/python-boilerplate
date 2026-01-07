@@ -1,10 +1,7 @@
 [env]
-_.file = '.env' # https://mise.jdx.dev/environments/#env-file
-UV_PYTHON = { value = "",  tools = true } # https://github.com/jdx/mise/discussions/4698
-
-[settings]
-python.uv_venv_auto = true # https://mise.jdx.dev/lang/python.html#python.uv_venv_auto
-experimental = true
+_.file = { path = '.env', tools = true }      # https://mise.jdx.dev/environments/#env-file
+_.python.venv = { path = '.venv' }            # https://mise.jdx.dev/lang/python.html
+UV_PYTHON = { value = "",  tools = true }     # https://github.com/jdx/mise/discussions/4698
 
 [tasks.check]
 alias = "c"
