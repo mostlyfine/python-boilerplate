@@ -39,20 +39,18 @@ mise run sync
 
 ### Running Tasks
 
-Execute various commands using mise's task runner:
+Execute various commands using Makefile:
 
 ```bash
+# Sync dependencies
+make sync
+
 # Code check (Ruff + ty)
-mise run check
-# or shorthand: mise run c
+make  check
 
 # Launch marimo notebook
-mise run marimo
-# or shorthand: mise run m
+make marimo
 
-# Sync dependencies
-mise run sync
-# or shorthand: mise run s
 ```
 
 ### Running Python Scripts
@@ -84,7 +82,7 @@ uv remove <package-name>
 
 ```
 .
-├── mise.local.toml      # mise configuration (tool versions, task definitions)
+├── mise.local.toml      # mise configuration (tool versions)
 ├── pyproject.toml       # Project metadata and dependencies
 ├── uv.lock              # Dependency lock file
 ├── .python-version      # Python version specification

@@ -1,27 +1,4 @@
 [env]
-_.file = { path = '.env', tools = true }      # https://mise.jdx.dev/environments/#env-file
-_.python.venv = { path = '.venv' }            # https://mise.jdx.dev/lang/python.html
-UV_PYTHON = { value = "",  tools = true }     # https://github.com/jdx/mise/discussions/4698
-
-[tasks.check]
-alias = "c"
-description = "Run static code analysis and type checking"
-run = [
-  'uv run ruff check --fix',
-  'uv run ruff format',
-  'uv run ty check'
-]
-
-[tasks.marimo]
-alias = "m"
-description = "Run marimo"
-run = [
-  'uv run marimo edit'
-]
-
-[tasks.sync]
-alias = "s"
-description = "Install dependencies"
-run = [
-  'uv sync'
-]
+_.file = { path = '.env', tools = true } # https://mise.jdx.dev/environments/#env-file
+_.python.venv = { path = '.venv' }       # https://mise.jdx.dev/lang/python.html
+UV_PYTHON = { value = "", tools = true } # https://github.com/jdx/mise/discussions/4698
