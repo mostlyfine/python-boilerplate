@@ -36,4 +36,4 @@ test: ## Run tests with pytest
 	@$(UV) run pytest
 
 clean: ## Remove common local caches
-	@rm -rf .venv .ruff_cache .pytest_cache __pycache__ .mypy_cache .ty_cache *.pyc
+	@rm -rf .ruff_cache .pytest_cache __pycache__ .mypy_cache .ty_cache *.pyc
