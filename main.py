@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     print(f"Python version: {sys.version}")
 

@@ -12,7 +12,7 @@ init: ## Initialize project (uv)
 sync: ## Install/sync Python dependencies (uv)
 	@$(UV) sync
 
-check: typecheck lintfix fmt ## type-check/lint/format (ruff + ty)
+check: typecheck lintfix fmt test ## type-check/lint/format/test (ruff + ty + pytest)
 
 marimo: ## Launch marimo editor
 	@$(UV) run marimo edit
@@ -31,6 +31,9 @@ lintfix: ## Lint with ruff (auto-fix)
 
 typecheck: ## Type-check with ty
 	@$(UV) run ty check
+
+test: ## Run tests with pytest
+	@$(UV) run pytest
 
 clean: ## Remove common local caches
 	@rm -rf .venv .ruff_cache .pytest_cache __pycache__ .mypy_cache .ty_cache *.pyc
