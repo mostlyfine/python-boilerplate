@@ -86,9 +86,9 @@ python-boilerplate/
 
 ## Workflow
 
-1. **Setup**: `mise install` → `mise run sync`
+1. **Setup**: `mise install` → `mise trust`
 2. **Development**: Write code with type hints
-3. **Quality Check**: `mise run check` (Ruff + ty)
+3. **Quality Check**: `make check` (Ruff + ty)
 4. **Testing**: Run tests with pytest
 5. **Interactive Development**: Use marimo for exploration
 

@@ -29,10 +29,6 @@ brew install mise
 ```bash
 # Install required tools with mise (uv, etc.)
 mise install
-
-# Install Python3 and Python package dependencies
-mise run sync
-# or shorthand: mise run s
 ```
 
 ## Usage
