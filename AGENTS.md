@@ -9,16 +9,16 @@ python-boilerplate/
 ├── .devcontainer/          # Development container configuration
 ├── .venv/                  # Virtual environment (generated)
 ├── .vscode/                # VS Code settings
+├── src/                    # Application source code
+│   └── main.py             # Main application entry point
 ├── tests/                  # Test files
-│   ├── conftest.py        # pytest configuration and fixtures
-│   └── test_main.py       # Test cases for main.py
-├── AGETNS.md              # This file - Agents and tools documentation
-├── Makefile               # Task automation commands
-├── Readme.md              # Project documentation
-├── main.py                # Main application entry point
-├── mise.local.toml        # Local mise configuration
-├── pyproject.toml         # Python project metadata and dependencies
-└── uv.lock                # Locked dependency versions (generated)
+│   └── test_main.py        # Test cases for main module
+├── AGENTS.md               # This file - Agents and tools documentation
+├── Makefile                # Task automation commands
+├── Readme.md               # Project documentation
+├── mise.local.toml         # Local mise configuration
+├── pyproject.toml          # Python project metadata and dependencies
+└── uv.lock                 # Locked dependency versions (generated)
 ```
 
 ### Key Files
@@ -27,7 +27,8 @@ python-boilerplate/
 - **Makefile**: Provides convenient commands for development tasks
 - **mise.local.toml**: Local environment configuration for mise
 - **uv.lock**: Lock file ensuring reproducible builds
-- **main.py**: Application entry point
+- **src/main.py**: Application entry point
+- **tests/test_main.py**: Basic test for the main module
 
 ## Development Environment Agents
 
@@ -37,8 +38,8 @@ python-boilerplate/
 - **Usage**: Manages Python, uv, and other tool versions automatically
 - **Key Commands**:
   - `mise install` - Install all required tools
-  - `mise run sync` - Sync dependencies
-  - `mise run check` - Run code quality checks
+  - `make sync` - Sync dependencies
+  - `make check` - Run code quality checks
 
 ### uv
 - **Purpose**: Fast Python package installer and virtual environment manager
