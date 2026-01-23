@@ -1,4 +1,4 @@
 [env]
 _.file = { path = '.env', tools = true } # https://mise.jdx.dev/environments/#env-file
-_.python.venv = { path = '.venv' }       # https://mise.jdx.dev/lang/python.html
+_.python.venv = { path = '.venv', create = true}       # https://mise.jdx.dev/lang/python.html
 UV_PYTHON = { value = "", tools = true } # https://github.com/jdx/mise/discussions/4698
