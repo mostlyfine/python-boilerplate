@@ -18,7 +18,7 @@ marimo: ## Launch marimo editor
 	@$(UV) run marimo edit
 
 run: ## Run main.py via uv
-	@$(UV) run main.py
+	@$(UV) run src/main.py
 
 fmt: ## Format with ruff
 	@$(UV) run ruff format
