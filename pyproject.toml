@@ -4,15 +4,22 @@ version = "0.1.0"
 description = "A Python boilerplate project."
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = ["marimo>=0.18.4"]
+dependencies = [
+  "marimo>=0.18.4"
+]
 
 [dependency-groups]
-dev = ["ruff>=0.14.10", "ty>=0.0.8", "pytest>=8.0.0"]
+dev = [
+  "ruff>=0.14.10",
+  "ty>=0.0.8",
+  "pytest>=8.0.0",
+  "pytest-cov>=7.0.0"
+]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
-addopts = "-q"
+addopts = "-v --cov --cov-branch --cov-report=term:skip-covered"
 
 [tool.ruff]
 line-length = 120
