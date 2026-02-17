@@ -1,0 +1,9 @@
+{
+  "name": "skill-creator",
+  "source": "anthropics-skills",
+  "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.",
+  "description_ja": "Create new agent skills",
+  "whenToUse": "This skill provides guidance for creating effective skills.",
+  "categories": [],
+  "installedAt": "2026-02-17T13:26:45.753Z"
+}
