@@ -3,6 +3,7 @@ name = "python-boilerplate"
 version = "0.1.0"
 description = "A Python boilerplate project."
 readme = "README.md"
+license = { text = "MIT" }
 requires-python = ">=3.11"
 dependencies = [
   "marimo>=0.18.4"
@@ -13,40 +14,7 @@ dev = [
   "ruff>=0.14.10",
   "ty>=0.0.8",
   "pytest>=8.0.0",
-  "pytest-cov>=7.0.0"
+  "pytest-cov>=7.0.0",
+  "sqlfluff>=4.0.4",
+
 ]
-
-[tool.pytest.ini_options]
-pythonpath = ["src"]
-testpaths = ["tests"]
-addopts = "-v --cov --cov-branch --cov-report=term:skip-covered"
-
-[tool.ruff]
-line-length = 120
-indent-width = 4
-target-version = "py312"
-
-[tool.ruff.lint]
-pydocstyle.convention = "google"
-select = [
-  "F", # pyflakes
-  "E", # pycodestyle
-  "W", # pycodestyle warnings
-  "I", # isort
-  "D", # pydocstyle
-]
-ignore = [
-  "D105", # undocumented-magic-method
-  "D107", # undocumented-public-init
-  "D205", # blank-line-after-summary
-  "E402", # sys path before import
-  "D415", # ends-in-punctuation
-]
-fixable = ["ALL"]
-
-[tool.ruff.lint.per-file-ignores]
-"__init__.py" = ["F401"]
-
-[tool.ruff.format]
-quote-style = "double"
-indent-style = "space"
