@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""
-Skill Initializer - Creates a new skill from template
+"""Skill Initializer - Creates a new skill from template
 
 Usage:
     init_skill.py <skill-name> --path <path>
@@ -13,7 +12,6 @@ Examples:
 
 import sys
 from pathlib import Path
-
 
 SKILL_TEMPLATE = """---
 name: {skill_name}
@@ -192,8 +190,7 @@ def title_case_skill_name(skill_name):
 
 
 def init_skill(skill_name, path):
-    """
-    Initialize a new skill directory with template SKILL.md.
+    """Initialize a new skill directory with template SKILL.md.
 
     Args:
         skill_name: Name of the skill

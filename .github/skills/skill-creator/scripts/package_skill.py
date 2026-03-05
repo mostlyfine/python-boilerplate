@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""
-Skill Packager - Creates a distributable .skill file of a skill folder
+"""Skill Packager - Creates a distributable .skill file of a skill folder
 
 Usage:
     python utils/package_skill.py <path/to/skill-folder> [output-directory]
@@ -13,12 +12,12 @@ Example:
 import sys
 import zipfile
 from pathlib import Path
+
 from quick_validate import validate_skill
 
 
 def package_skill(skill_path, output_dir=None):
-    """
-    Package a skill folder into a .skill file.
+    """Package a skill folder into a .skill file.
 
     Args:
         skill_path: Path to the skill folder
