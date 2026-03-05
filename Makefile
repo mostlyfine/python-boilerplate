@@ -43,3 +43,9 @@ sqlfmt: ## Format SQL files with sqlfluff (auto-fix)
 
 clean: ## Remove common local caches
 	@rm -rf .ruff_cache .pytest_cache __pycache__ .mypy_cache .ty_cache *.pyc
+
+pre-commit-install: ## Install pre-commit hooks
+	@$(UV) run pre-commit install
+
+pre-commit: ## Run pre-commit on all files
+	@$(UV) run pre-commit run --all-files
